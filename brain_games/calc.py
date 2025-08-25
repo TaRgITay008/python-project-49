@@ -24,7 +24,7 @@ def play_game():
                 print(f"Let's try again, {name}!")
                 return
         else:
-            print(f"'{answer}' is not a valid number.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'")
             print(f"Let's try again, {name}!")
             return
    
