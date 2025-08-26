@@ -17,12 +17,12 @@ def play_game():
         print(f'Question: {number}')
         user = prompt.string('Your answer: ').lower()
 
-        correct = 'yes' if even(number) else 'no'
+        corrects = 'yes' if even(number) else 'no'
 
         if user not in ['yes', 'no']:
             print(
                     f"'{user}' is wrong answer ;(." 
-                    f"Correct answer was '{correct}'."
+                    f"Correct answer was '{corrects}'."
                 )
             print(f"Let's try again, {name}!")
             return
@@ -33,7 +33,7 @@ def play_game():
         else:
             print(
                     f"'{user}' is wrong answer ;(." 
-                    f"Correct answer was '{correct}'."
+                    f"Correct answer was '{corrects}'."
                 )
             print(f"Let's try again, {name}!")
             return
