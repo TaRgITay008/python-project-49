@@ -1,4 +1,4 @@
-from brain_games.even import play_game
+from brain_games.games.even import play_game
 
 
 def main():
