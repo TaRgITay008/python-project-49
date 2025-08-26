@@ -1,5 +1,6 @@
 import random
 
+
 def play_game():
     name = input("May I have your name? ")
     print(f"Hello, {name}!")
@@ -23,7 +24,10 @@ def play_game():
         if answer == correct:
             print("Correct!\n")
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+            print(
+                    f"'{answer}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
             print(f"Let's try again, {name}!")
             return
 

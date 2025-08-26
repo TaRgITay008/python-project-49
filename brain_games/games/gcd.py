@@ -1,5 +1,6 @@
-import random
 import math
+import random
+
 
 def play_game():
     name = input("May I have your name? ")
@@ -12,17 +13,23 @@ def play_game():
         correct = math.gcd(a, b)
 
         print(f"Question: {a} {b}")
-        user_answer = input("Your answer: ")
+        user = input("Your answer: ")
 
-        if user_answer.strip().isdigit():
-            if int(user_answer) == correct:
+        if user.strip().isdigit():
+            if int(user) == correct:
                 print("Correct!\n")
             else:
-                print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+                print(
+                    f"'{user}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
                 print(f"Let's try again, {name}!")
                 return
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+            print(
+                    f"'{user}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
             print(f"Let's try again, {name}!")
             return
 

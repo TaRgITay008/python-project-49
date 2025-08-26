@@ -1,5 +1,6 @@
 import random
 
+
 def play_game():
     import prompt
     name = prompt.string('May I have your name?')
@@ -16,15 +17,23 @@ def play_game():
         print(f"Question: {expression}")
         answer = input("Your answer: ")
 
-        if answer.strip().isdigit() or (answer.strip()[0] == '-' and answer.strip()[1:].isdigit()):
+        clean_answer = answer.strip()
+        if clean_answer.isdigit() or (clean_answer.startswith('-') and 
+        clean_answer[1:].isdigit()):
             if int(answer) == correct:
                 print("Correct!\n")
             else:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+                print(
+                    f"'{answer}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
                 print(f"Let's try again, {name}!")
                 return
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'")
+            print(
+                    f"'{answer}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
             print(f"Let's try again, {name}!")
             return
    

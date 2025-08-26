@@ -11,24 +11,30 @@ def play_game():
     print(f'Hello, {name}!')
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    correct_answers = 0
-    while correct_answers < 3:
+    correct = 0
+    while correct < 3:
         number = random.randint(1, 100)
         print(f'Question: {number}')
-        user_answer = prompt.string('Your answer: ').lower()
+        user = prompt.string('Your answer: ').lower()
 
-        correct_answer = 'yes' if even(number) else 'no'
+        correct = 'yes' if even(number) else 'no'
 
-        if user_answer not in ['yes', 'no']:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+        if user not in ['yes', 'no']:
+            print(
+                    f"'{user}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
             print(f"Let's try again, {name}!")
             return
 
-        if user_answer == correct_answer:
+        if user == correct:
             print('Correct!')
-            correct_answers += 1
+            correct += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                    f"'{user}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
             print(f"Let's try again, {name}!")
             return
 

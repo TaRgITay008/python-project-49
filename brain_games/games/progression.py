@@ -1,5 +1,6 @@
 import random
 
+
 def play_game():
     name = input("May I have your name? ")
     print(f"Hello, {name}!")
@@ -13,22 +14,29 @@ def play_game():
         progression = [start + step * i for i in range(length)]
 
         missing_index = random.randint(0, length - 1)
-        correct_answer = progression[missing_index]
+        correct = progression[missing_index]
         progression[missing_index] = ".."
 
         question = ' '.join(str(x) for x in progression)
         print(f"Question: {question}")
-        user_input = input("Your answer: ")
+        user = input("Your answer: ")
 
-        if user_input.strip().isdigit() or (user_input.strip().startswith('-') and user_input.strip()[1:].isdigit()):
-            if int(user_input) == correct_answer:
+        user = user.strip()
+        if user.isdigit() or (user.startswith('-') and user[1:].isdigit()):
+            if int(user) == correct:
                 print("Correct!\n")
             else:
-                print(f"'{user_input}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+                print(
+                    f"'{user}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
                 print(f"Let's try again, {name}!")
                 return
         else:
-            print(f"'{user_input}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+            print(
+                    f"'{user}' is wrong answer ;(." 
+                    f"Correct answer was '{correct}'."
+                )
             print(f"Let's try again, {name}!")
             return
 
