@@ -15,7 +15,7 @@ def play_game():
     while correct < 3:
         number = random.randint(1, 100)
         print(f'Question: {number}')
-        user = prompt.string('Your answer: ').lower()
+        user = prompt.string('Your answer: ').strip().lower()
 
         corrects = 'yes' if even(number) else 'no'
 
@@ -27,7 +27,7 @@ def play_game():
             print(f"Let's try again, {name}!")
             return
 
-        if user == correct:
+        if user == corrects:
             print('Correct!')
             correct += 1
         else:
