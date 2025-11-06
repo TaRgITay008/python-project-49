@@ -1,10 +1,30 @@
 # Brain Games
 
-A collection of math games for training mental calculation.
+[![Actions Status](https://github.com/TaRgITay008/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/TaRgITay008/python-project-49/actions)
 
-## Games
-- brain-even - check if number is even
-- brain-calc - calculator game
-- brain-gcd - greatest common divisor
-- brain-progression - arithmetic progression
-- brain-prime - prime number check
+Brain Games — набор мини-игр для тренировки логики и устного счёта на консоли.
+Каждая игра состоит из 3 раундов.
+
+### Доступные игры:
+
+- brain-even – проверка на чётность
+- brain-calc – калькулятор
+- brain-gcd – наибольший общий делитель
+- brain-progression – арифметическая прогрессия
+- brain-prime – простое ли число?
+
+### Минимальные требования
+
+- Python ≥ 3.8
+- ОС: Linux, macOS или Windows (WSL/git bash)
+
+### Запуск игр
+
+Каждая игра — это консольная команда:
+
+```bash
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
